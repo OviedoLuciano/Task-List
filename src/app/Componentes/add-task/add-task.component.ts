@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UiService } from 'src/app/Servicios/ui.service';
-import {Task} from '../../Task';
 import {Subscription} from 'rxjs'
-
+import Swal from 'sweetalert2'
+import { Task } from 'src/app/Modelos/Task';
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
@@ -30,11 +30,17 @@ subscription?: Subscription;
       return
     }
 
-    const {text, day, reminder} = this
+ const {text, day, reminder} = this
     const newTask = {text,day,reminder}
       
     this.onAddTask.emit(newTask);
-    
+    Swal.fire({
+      position: 'center-end',
+      icon: 'success',
+      title: 'Tarea agregada :)',
+      showConfirmButton: false,
+      timer: 1500
+    })
     }
   }
 

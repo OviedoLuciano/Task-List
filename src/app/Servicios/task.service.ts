@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { TASKS } from '../mock-tasks';
-import {Task} from '../Task'
+
+import { Task } from 'src/app/Modelos/Task';
 
 
 const httpOptions ={
@@ -26,16 +26,16 @@ private apiUrl = 'http://localhost:8080/tasklist/tasks'
   }
 
   deleteTask(task:Task):Observable<Task>{
-    const url = `${this.apiUrl}/${task.id}`
+    const url = `${this.apiUrl}/borrar/${task.id}`
     return this.http.delete<Task>(url)
   }
 
   updateTaskReminder(task:Task):Observable<Task>{
-    const url = `${this.apiUrl}/${task.id}`
+    const url = `${this.apiUrl}/editar/${task.id}`
     return this.http.put<Task>(url, task, httpOptions)
   }
 
   addTask(task:Task):Observable<Task>{
-    return this.http.post<Task>(`${this.apiUrl}`, task, httpOptions)
+    return this.http.post<Task>(`${this.apiUrl}/crear`, task, httpOptions)
   }
 }

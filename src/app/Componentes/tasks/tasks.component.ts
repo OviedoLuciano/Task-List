@@ -1,6 +1,6 @@
 import { TaskService } from './../../Servicios/task.service';
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../../Task';
+import { Task } from 'src/app/Modelos/Task';
 
 @Component({
   selector: 'app-tasks',
@@ -18,6 +18,7 @@ tasks: Task[]= [];
   }
 
   deleteTask(task:Task){
+  
     this.taskService.deleteTask(task).subscribe(()=>{
       this.tasks = this.tasks.filter( (t) => t.id !== task.id)
     })

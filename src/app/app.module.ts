@@ -11,6 +11,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './Componentes/add-task/add-task.component';
 import {FormsModule} from '@angular/forms';
 import { BackgroundComponent } from './Componentes/background/background.component';
+import { HomeComponent } from './Componentes/home/home.component';
+import { LoginComponent } from './Componentes/login/login.component';
+import { NavComponent } from './Componentes/nav/nav.component';
+import { interceptorProvider } from './Servicios/interceptor-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,10 @@ import { BackgroundComponent } from './Componentes/background/background.compone
     TasksComponent,
     TasksItemComponent,
     AddTaskComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    HomeComponent,
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,7 @@ import { BackgroundComponent } from './Componentes/background/background.compone
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

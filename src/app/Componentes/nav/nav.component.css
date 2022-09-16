@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+ 
+ 
+img{
+    cursor: pointer;
+    position: relative;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+    width:55px;
+    border-radius:100px;
+   margin-left: 20px;
+   padding:5px;
+}
+
+
+a{
+text-decoration: none;
+color: rgb(15, 15, 15);
+}
+.container-fluid {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.05);
+}
+
+.btn{
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+   
+    cursor: pointer;
+    position: relative;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+   background-color: #3a545f;
+   margin-right: 20px;
+}
+
+
+
+
+@media(max-width:575px){
+.container-fluid{
+    flex-direction: column;
+
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.redes i, .redes button {
+    margin: 0.5em;
+}
+
+.nav a{
+    display: flex;
+ 
+}
+}
