@@ -5,15 +5,15 @@
                         Bienvenido
                     </div>
                     <form #f="ngForm" (ngSubmit)="onLogin()" novalidate id="loginform">
-                        <input type="email" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
+                        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
                         
                         <input type="password" id="password" placeholder="Contraseña" name="password" [(ngModel)]="password" required>
                         
-                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                       <a href="/login"> <button type="submit" title="Ingresar" name="Ingresar" >Login</button></a>
                     </form>
                     <div class="pie-form">
                         <a href="#">¿Perdiste tu contraseña?</a>
-                        <a href="#">¿No tienes Cuenta? Registrate</a>
+                        <a href="/registrarse">¿No tienes Cuenta? Registrate</a>
                     </div>
                 </div>
                 <div class="inferior">
@@ -21,4 +21,3 @@
                 </div>
             </div>
         </div>
-    

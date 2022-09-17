@@ -1,6 +1,8 @@
 import { TaskService } from './../../Servicios/task.service';
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/Modelos/Task';
+import Swal from 'sweetalert2';
+import { TokenService } from 'src/app/Servicios/token.service';
 
 @Component({
   selector: 'app-tasks',
@@ -15,6 +17,7 @@ tasks: Task[]= [];
   ngOnInit(): void {
    this.taskService.getTasks().subscribe((tasks) =>
     (this.tasks = tasks));
+    
   }
 
   deleteTask(task:Task){
@@ -32,5 +35,12 @@ tasks: Task[]= [];
   addTask(task:Task){
    this.taskService.addTask(task).subscribe(task=>
     this.tasks.push(task));
+    Swal.fire({
+      position: 'center-end',
+      icon: 'success',
+      title: 'Tarea agregada :)',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 }

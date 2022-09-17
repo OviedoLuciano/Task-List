@@ -15,6 +15,9 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
 import { NavComponent } from './Componentes/nav/nav.component';
 import { interceptorProvider } from './Servicios/interceptor-service';
+import { RegistrarseComponent } from './Componentes/registrarse/registrarse.component';
+import { AboutComponent } from './Componentes/about/about.component';
+import { FooterComponent } from './Componentes/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { interceptorProvider } from './Servicios/interceptor-service';
     BackgroundComponent,
     HomeComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    RegistrarseComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

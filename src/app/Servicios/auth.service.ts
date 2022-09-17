@@ -9,11 +9,11 @@ import { NuevoUsuario } from '../Modelos/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-authURL = 'http://localhost:8080/auth/';
+authURL = 'https://tasklist-back.herokuapp.com/auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario):Observable<any>{
-return this.httpClient.post<any>(this.authURL, nuevoUsuario);
+return this.httpClient.post<any>(this.authURL+'nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario:LoginUsuario):Observable<JwtDto>{

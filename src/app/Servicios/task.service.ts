@@ -14,7 +14,7 @@ const httpOptions ={
   providedIn: 'root'
 })
 export class TaskService {
-private apiUrl = 'http://localhost:8080/tasklist/tasks'
+private apiUrl = 'https://tasklist-back.herokuapp.com/tasklist/tasks'
   constructor(private http: HttpClient) { }
 
   getTasks():Observable<Task[]>{

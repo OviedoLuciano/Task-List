@@ -30,17 +30,14 @@ subscription?: Subscription;
       return
     }
 
+
  const {text, day, reminder} = this
     const newTask = {text,day,reminder}
       
     this.onAddTask.emit(newTask);
-    Swal.fire({
-      position: 'center-end',
-      icon: 'success',
-      title: 'Tarea agregada :)',
-      showConfirmButton: false,
-      timer: 1500
-    })
+    
     }
+
+
   }
 

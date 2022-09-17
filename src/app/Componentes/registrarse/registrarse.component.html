@@ -1,0 +1,21 @@
+<div id="contenedor">
+    <div id="central">
+        <div id="login">
+            <div class="titulo">
+                Registrate
+            </div>
+            <form #f="ngForm" (ngSubmit)="onRegister()" novalidate id="loginform">
+                <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario"  required>
+                
+                <input type="text" id="email" placeholder="Email" name="email" [(ngModel)]="email"  required>
+                <input type="password" id="password" placeholder="Contraseña" name="password" [(ngModel)]="password"   required>
+
+                <button type="submit" title="Registrarse" name="Registrarse">Registrarse</button>
+            </form>
+          
+        </div>
+        <div class="inferior">
+            <a href="#">Volver</a>
+        </div>
+    </div>
+</div>
